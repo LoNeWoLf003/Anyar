@@ -514,6 +514,12 @@ h6 {
   font-size: 48px;
   font-weight: 700;
 }
+#hero h3 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 700;
+}
 
 #hero p {
   width: 80%;
