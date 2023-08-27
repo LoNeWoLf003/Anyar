@@ -637,6 +637,10 @@ section {
   border-radius: 10px;
 }
 
+.icon-boxes .icon-box:hover {
+  transform: scale(1.08);
+}
+
 .icon-boxes .icon {
   margin: 0 auto 20px auto;
   display: inline-block;
@@ -653,7 +657,13 @@ section {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+  transition: all 0.3s ease-in-out;
 }
+
+.icon-boxes .title:hover {
+  transform: translateX(10px);
+}
+
 
 .icon-boxes .title a {
   color: #05579e;
