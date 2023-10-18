@@ -1324,6 +1324,16 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+.portfolio-details .portfolio-description span {
+  color: red;
+  font-weight: 900;
+  size: 30px;
+}
+.portfolio-details .portfolio-description span2 {
+  color: #18d26e;
+  font-weight: 900;
+  size: 30px;
+}
 
 /*--------------------------------------------------------------
 # Team
