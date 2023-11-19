@@ -1321,20 +1321,34 @@ section {
   margin-bottom: 20px;
 }
 
+.portfolio-details .portfolio-description h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
 .portfolio-details .portfolio-description p {
-  padding: 0;
+  padding: 30;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
 }
 .portfolio-details .portfolio-description span {
-  color: red;
+  color: MediumSlateBlue;
   font-weight: 900;
   size: 30px;
 }
 .portfolio-details .portfolio-description span2 {
-  color: #18d26e;
+  color: MidnightBlue;
   font-weight: 900;
   size: 30px;
 }
 
+.portfolio-details .portfolio-description span3 {
+  color: Teal;
+  font-weight: 900;
+  size: 30px;
+}
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
