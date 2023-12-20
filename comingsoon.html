@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Right Click Systems</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <!-- Template Main CSS File -->
+    <link href="assets/css/csstyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <canvas id='beerCanvas'></canvas>
+        <div class="coming_content">
+            <h1>Coming Soon</h1>
+            <div class="separator_container">
+                <div class="separator line_separator">
+                </div>
+            </div>
+            <a href="index.html"><button class="custom-btn btn-1">&larr; Go Back</button></a>
+        </div>
+    </section>
+    <script>
+        var canvas = document.getElementById('beerCanvas');
+        var ctx = canvas.getContext('2d');
+        var particles = [];
+        var particleCount = 280;
+
+        for (var i = 0; i < particleCount; i++) {
+            particles.push(new particle());
+        }
+
+        function particle() {
+            this.x = Math.random() * canvas.width;
+            this.y = canvas.height + Math.random() * 300;
+            this.speed = 1 + Math.random();
+            this.radius = Math.random() * 3;
+            this.opacity = (Math.random() * 100) / 1000;
+        }
+
+        function loop() {
+            requestAnimationFrame(loop);
+            draw();
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.globalCompositeOperation = 'lighter';
+            for (var i = 0; i < particles.length; i++) {
+                var p = particles[i];
+                ctx.beginPath();
+                ctx.fillStyle = 'rgba(255,255,255,' + p.opacity + ')';
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2, false);
+                ctx.fill();
+                p.y -= p.speed;
+                if (p.y <= -10)
+                    particles[i] = new particle();
+            }
+        }
+        loop();
+    </script>
+</body>
+
+</html>
